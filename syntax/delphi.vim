@@ -22,7 +22,7 @@ syn keyword delphiCallingConv cdecl pascal register safecall stdcall winapi
 syn keyword delphiDirective library package program unit
 syn keyword delphiDirective absolute abstract assembler delayed deprecated dispid dynamic experimental export external final forward implements inline name message overload override packed platform readonly reintroduce static unsafe varargs virtual writeonly
 syn keyword delphiDirective helper reference sealed
-syn keyword delphiDirective contains requires
+syn keyword delphiDirective "contains" requires
 syn keyword delphiDirective far near resident
 syn keyword delphiVisibility private protected public published strict
 
