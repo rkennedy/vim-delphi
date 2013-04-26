@@ -4,7 +4,7 @@ Vim comes with a Pascal syntax highlighter, but it fails with most Delphi code. 
 
 ## Install
 
-This is a Pathogen bundle, the the easiest way to install it is to clone this project directly into your bundle directory:
+This is a Pathogen bundle, so the the easiest way to install it is to clone this project directly into your bundle directory:
 
 ```bash
 cd ~/.vim/bundle
