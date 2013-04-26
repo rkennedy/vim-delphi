@@ -8,5 +8,5 @@ This is a Pathogen bundle, the the easiest way to install it is to clone this pr
 
 ```bash
 cd ~/.vim/bundle
-git clone git://github.com/rkennedy/vim-delphi
+git clone git://github.com/rkennedy/vim-delphi.git
 ```
