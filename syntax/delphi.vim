@@ -8,7 +8,9 @@ endif
 
 syn case ignore
 
-syn keyword delphiReservedWord array asm begin dispinterface end finalization goto implementation inherited initialization label of packed set type uses with
+syn match delphiEnd "\v<end>"
+syn match delphiAsm "\v<asm>"
+syn keyword delphiReservedWord array begin dispinterface finalization goto implementation inherited initialization label of packed set type uses with
 syn keyword delphiReservedWord constructor destructor function operator procedure property
 syn keyword delphiReservedWord const out threadvar var
 
@@ -45,6 +47,7 @@ syn region delphiDefine start="{\$" end="}"
 syn region delphiDefine start="(\*\$" end="\*)"
 
 syn match delphiType "\v<(byte|word|long)?bool>"
+syn keyword delphiType boolean
 syn match delphiType "\v<(short|small|long|nativeu?)int>"
 syn match delphiType "\v<u?int(8|16|32|64|128)>"
 syn match delphiType "\v<(long)?word>"
@@ -72,11 +75,15 @@ syn region delphiString start="'" end="'" skip="''" oneline
 syn match delphiChar "\v\#\d+"
 syn match delphiChar "\v\#\$[0-9a-f]{1,6}"
 
+syn region delphiAsmBlock start="\v<asm>" end="\v<end>" contains=delphiComment,delphiAsm,delphiEnd keepend
+
 syn match delphiBadChar "\v\%|\?|\\|\!|\"|\||\~"
 
 hi def link delphiComment Comment
 hi def link delphiType Type
+hi def link delphiEnd Keyword
 hi def link delphiReservedWord Keyword
+hi def link delphiAsm Keyword
 hi def link delphiInteger Number
 hi def link delphiReal Float
 hi def link delphiDefine PreProc
@@ -84,7 +91,6 @@ hi def link delphiString String
 hi def link delphiChar Character
 "hi def link delphiIdentifier Identifier
 hi def link delphiOperator Operator
-hi def link delphiAsm Statement
 hi def link delphiNil Constant
 hi def link delphiBool Identifier "Boolean
 hi def link delphiPredef Special
