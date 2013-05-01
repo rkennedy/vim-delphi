@@ -104,3 +104,5 @@ hi def link delphiCallingConv StorageClass
 hi def link delphiDirective StorageClass
 hi def link delphiPropDirective StorageClass
 hi def link delphiStructure Structure
+
+let b:current_syntax = "delphi"
