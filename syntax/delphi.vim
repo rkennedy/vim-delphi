@@ -46,7 +46,9 @@ syn region delphiComment start="//" end="$" oneline
 syn region delphiDefine start="{\$" end="}"
 syn region delphiDefine start="(\*\$" end="\*)"
 
-syn match delphiType "\v<(byte|word|long)?bool>"
+syn keyword delphiWindowsType bool dword ulong
+syn match delphiWindowsType "\v<h(dc|result|wnd)>"
+syn match delphiType "\v<(byte|word|long)bool>"
 syn keyword delphiType boolean
 syn match delphiType "\v<(short|small|long|nativeu?)int>"
 syn match delphiType "\v<u?int(8|16|32|64|128)>"
@@ -82,6 +84,7 @@ syn match delphiBadChar "\v\%|\?|\\|\!|\"|\||\~"
 hi def link delphiComment Comment
 hi def link delphiType Type
 hi def link delphiEnd Keyword
+hi def link delphiWindowsType Type
 hi def link delphiReservedWord Keyword
 hi def link delphiAsm Keyword
 hi def link delphiInteger Number
