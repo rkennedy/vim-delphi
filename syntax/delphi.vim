@@ -8,9 +8,8 @@ endif
 
 syn case ignore
 
-syn match delphiEnd "\v<end>"
 syn match delphiAsm "\v<asm>"
-syn keyword delphiReservedWord array begin dispinterface finalization goto implementation inherited initialization label of packed set type uses with
+syn keyword delphiReservedWord end array begin dispinterface finalization goto implementation inherited initialization label of packed set type uses with
 syn keyword delphiReservedWord constructor destructor function operator procedure property
 syn keyword delphiReservedWord const out threadvar var
 
@@ -77,13 +76,12 @@ syn region delphiString start="'" end="'" skip="''" oneline
 syn match delphiChar "\v\#\d+"
 syn match delphiChar "\v\#\$[0-9a-f]{1,6}"
 
-syn region delphiAsmBlock start="\v<asm>" end="\v<end>" contains=delphiComment,delphiAsm,delphiEnd keepend
+syn region delphiAsmBlock start="\v<asm>" end="\v<end>" contains=delphiComment,delphiAsm keepend
 
 syn match delphiBadChar "\v\%|\?|\\|\!|\"|\||\~"
 
 hi def link delphiComment Comment
 hi def link delphiType Type
-hi def link delphiEnd Keyword
 hi def link delphiWindowsType Type
 hi def link delphiReservedWord Keyword
 hi def link delphiAsm Keyword
