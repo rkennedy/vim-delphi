@@ -37,6 +37,7 @@ syn keyword delphiPredef result self
 syn keyword delphiAssert assert
 
 syn match delphiOperator "\v\+|-|\*|/|\@|\=|:\=|\<|\<\=|\>|\>\=|<>|\.\."
+syn match delphiOperator "\v\(|\)|\[|\]|,|\.|\;|\:"
 syn keyword delphiOperator and as div in is mod not or shr shl xor
 
 syn region delphiComment start="{" end="}"
