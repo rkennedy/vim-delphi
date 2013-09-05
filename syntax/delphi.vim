@@ -33,7 +33,7 @@ syn match delphiIdentifier "\v\&?[a-z_]\w*"
 
 syn keyword delphiNil nil
 syn keyword delphiBool true false
-syn keyword delphiPredef result
+syn keyword delphiPredef result self
 syn keyword delphiAssert assert
 
 syn match delphiOperator "\v\+|-|\*|/|\@|\=|:\=|\<|\<\=|\>|\>\=|<>|\.\."
